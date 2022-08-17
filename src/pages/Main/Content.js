@@ -4,6 +4,7 @@ import CDEdit from '../AdminMain/Actions/CDEdit'
 import CDView from '../AdminMain/Actions/CDView'
 import ClassesCreate from '../AdminMain/ClassesCreate'
 import ClassesView from '../AdminMain/ClassesView'
+import Classes from '../TeacherMain/information/Classes'
 import About from './About'
 import Details from './Details'
 import ListSubject from './ListSubject'
@@ -17,6 +18,7 @@ const Content = () => {
         <Route path='/About' element = {<About />} />
         <Route path='/Opted' element = {<OptedSubject />} />
         <Route path='/ListS' element = {<ListSubject />} />
+        <Route path='/Tclasses' element = {<Classes/>} />
         <Route path='/CView' element = {<ClassesView />} />
         <Route path='/CCreate' element = {<ClassesCreate />} />
         <Route path='/CDView/:id' element = {<CDView />} />

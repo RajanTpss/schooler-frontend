@@ -40,7 +40,7 @@ const TSidebar = () => {
                 data-bs-parent="#flush-headingOne"
               >
                 <div className="accordion-body text-dark">
-                  <Link className="text-dark text-decoration-none" to="/list">
+                  <Link className="text-dark text-decoration-none" to="/Tclasses">
                     Classes
                   </Link>
                 </div>

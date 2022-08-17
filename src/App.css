@@ -203,3 +203,15 @@ input#form3Example4 {
 
 }
 
+
+/* React-Paginate Css Start */
+
+.react-paginate{
+  display: inline-flex;
+  float: right;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.react-paginate li{
+  margin-left: 20px;
+}
