@@ -1,17 +1,14 @@
 .emp-profile{
-    padding: 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    padding: 2%;
     border-radius: 0.5rem;
-    background: #fff;
+    background: #F2F3F4;
 }
-.profile-img{
-    text-align: center;
-}
+
 .profile-img img{
     width: 70%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 15px;
+
 }
 .profile-img .file {
     position: relative;
@@ -33,7 +30,7 @@
     color: #333;
 }
 .profile-head h5{
-    color: #0062cc;
+    color :#34495E;
 }
 .profile-edit-btn{
     border: none;
@@ -63,7 +60,7 @@
 }
 .profile-head .nav-tabs .nav-link.active{
     border: none;
-    border-bottom:2px solid #0062cc;
+    border-bottom:#34495E;
 }
 .profile-work{
     padding: 14%;
@@ -89,5 +86,13 @@
 }
 .profile-tab p{
     font-weight: 600;
-    color: #0062cc;
+    color: #34495E;
+}
+a:hover {
+    color: #fff!important;
+    background-color: #34495E!important;
+}
+
+  .nav-tabs {
+    border: none;
 }

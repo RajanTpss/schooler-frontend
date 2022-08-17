@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ function App() {
       setToken(response.data.token);
       setStatus(response.status);
       setId(response.data.data.id);
-    });
+    }).catch(error => toast(error.message));
   };
 
   if (status === 200) {
@@ -61,16 +62,15 @@ function App() {
                 <div className="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
                   <div className="row gx-lg-5 align-items-center mb-5">
                     <div className="col-lg-6 mb-5 mb-lg-0">
-                      <h1 className="my-5 display-5 fw-bold ls-tight text-white">
-                        The best offer <br />
-                        <span>for your business</span>
+                      <h1 className="my-5 display-5 fw-bold ls-tight text-dark">
+                        The Schoolers <br />
+                        <span>for your school</span>
                       </h1>
-                      <p className="mb-4 opacity-70 text-white">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Temporibus, expedita iusto veniam atque, magni
-                        tempora mollitia dolorum consequatur nulla, neque
-                        debitis eos reprehenderit quasi ab ipsum nisi dolorem
-                        modi. Quos?
+                      <p className="mb-4 opacity-70 text-dark">
+                        An ERP System with all integrated features such as
+                        fees management, faculty management, student management
+                        and many more. This is one platform to revolutionize the
+                        schooling industry making management easy.
                       </p>
                     </div>
 
@@ -87,21 +87,27 @@ function App() {
                       <div className="card bg-glass">
                         <div className="card-body px-4 py-5 px-md-5">
                           <div className="form-outline mb-4">
-                            <input
-                              type="email"
-                              id="form3Example3"
-                              className="form-control"
-                              {...formik.getFieldProps("email")}
-                            />
                             <label
                               className="form-label"
                               htmlFor="form3Example3"
                             >
                               Email address
                             </label>
+                            <input
+                              type="email"
+                              id="form3Example3"
+                              className="form-control"
+                              {...formik.getFieldProps("email")}
+                            />
                           </div>
 
                           <div className="form-outline mb-4">
+                            <label
+                              className="form-label"
+                              htmlFor="form3Example4"
+                            >
+                              Password
+                            </label>
                             <input
                               id="form3Example4"
                               className="form-control"
@@ -125,12 +131,6 @@ function App() {
                                 }}
                               ></i>
                             )}
-                            <label
-                              className="form-label"
-                              htmlFor="form3Example4"
-                            >
-                              Password
-                            </label>
                           </div>
 
                           <button
@@ -179,6 +179,7 @@ function App() {
           </>
         )}
       </Formik>
+      <ToastContainer/>
     </>
   );
 }

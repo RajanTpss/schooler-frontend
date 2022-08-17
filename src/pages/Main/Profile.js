@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import anonymous from "../../assets/anonymous.png";
 import moment from "moment";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Profile = () => {
   const [file, setFile] = useState();

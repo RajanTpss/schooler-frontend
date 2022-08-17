@@ -24,8 +24,8 @@ const Layout = () => {
           
           
         </div>
-        <div className="col-10 m-0 p-0">
-          <div className="header">
+        <div className="col-10 main m-0 p-0">
+          <div className="header shadow">
           <Header />
           </div>
           <div className="m-5">

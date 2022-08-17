@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import logo from '../assets/images2.png';
+
 
 const ASidebar = () => {
   console.log("Teacher Sidebar");
@@ -8,9 +10,11 @@ const ASidebar = () => {
     <>
       <div className="wrapper ">
         <nav id="sidebar">
-          <div className="sidebar-header p-4 mb-5 text-white">
-            <h4>Admin</h4>
+          <div className="sidebar-header p-3 mb-2 text-white">
+          <img src={logo}  className="logo" alt = "logo" />
+          
           </div>
+          <hr></hr>
 
           <ul className="list-unstyled components">
             <Link
@@ -19,7 +23,8 @@ const ASidebar = () => {
             >
               Profile
             </Link>
-            <div className="accordion-item my-5">
+            <hr></hr>
+            <div className="accordion-item my-3">
               <h2 className="accordion-header" id="flush-headingOne">
                 <button
                   className="accordion-button collapsed shadow-none Accord border-none me-1"
@@ -30,9 +35,10 @@ const ASidebar = () => {
                   aria-controls="flush-collapseOne"
                 >
                   {" "}
-                  Employees
+                  Classes
                 </button>
               </h2>
+              
               <div
                 id="flush-collapseOne"
                 className="accordion-collapse collapse text-white"
@@ -40,20 +46,20 @@ const ASidebar = () => {
                 data-bs-parent="#flush-headingOne"
               >
                 <div className="accordion-body text-dark">
-                  <Link className="text-dark text-decoration-none" to="/list">
-                    Teacher
+                  <Link className="text-dark text-decoration-none" to="/CView">
+                    View
                   </Link>
                 </div>
                 <div className="accordion-body text-dark">
-                  <Link className="text-dark text-decoration-none" to="/create">
-                    Other Emp.
+                  <Link className="text-dark text-decoration-none" to="/CCreate">
+                    Create
                   </Link>
                 </div>
               </div>
             </div>
-            <li></li>
+            <hr></hr>
             <li>
-              <div className="accordion-item mb-5">
+              <div className="accordion-item mb-3">
                 <h2 className="accordion-header" id="flush-headingTwo">
                   <button
                     className="accordion-button collapsed shadow-none Accord border-none me-1"
@@ -100,14 +106,16 @@ const ASidebar = () => {
                 </div>
               </div>
             </li>
+              <hr></hr>
 
-            <li className="mt-5">
+            <li className="mt-3">
               <Link
                 className="text-dark text-decoration-none ps-4 text-white"
                 to="/Attendance"
               >
                 Attendence
               </Link>
+              <hr></hr>
             </li>
           </ul>
         </nav>

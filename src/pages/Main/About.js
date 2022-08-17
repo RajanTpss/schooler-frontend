@@ -4,6 +4,9 @@ import image from "../../assets/School.webp";
 const About = () => {
   return (
     <>
+      {/* <div className="App">
+    <h1>Title</h1>
+    </div>
     <img className="schoolimage mx-5 mb-4" src = {image} alt= "" />
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It
@@ -22,8 +25,23 @@ const About = () => {
         "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
         exact original form, accompanied by English versions from the 1914
         translation by H. Rackham.
-      </p>
+      </p> */}
+      <div className="col m-5">
+        <label htmlFor="">Title</label>
+        <input className="form-control" placeholder="Enter Title" />
+      </div>
+      <div className="col m-5">
+        <input type="file" accept="image/*" />
+      </div>
 
+      <div className="col m-5">
+        <label htmlFor="">Description</label>
+        <textarea
+          type="textarea"
+          className="form-control"
+          placeholder="Enter Title"
+        ></textarea>
+      </div>
     </>
   );
 };

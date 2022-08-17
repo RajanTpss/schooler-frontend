@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+
 const Header = () => {
   const navigate = useNavigate()
 
@@ -12,13 +13,13 @@ const Header = () => {
     <>
       <ul className="nav justify-content-center border-bottom">
         <li className="nav-item">
-          <Link className="nav-link active text-dark m-3 text-white" to="/About">
+          <Link className="nav-link active text-dark m-3 " to="/About">
             About Us
           </Link>
         </li>
         <li className="nav-item dropdown">
           <Link
-            className="nav-link dropdown-toggle m-3 text-dark text-decoration-none text-white"
+            className="nav-link dropdown-toggle m-3 text-dark text-decoration-none"
             to="#"
             id="navbarDropdown"
             role="button"
@@ -46,13 +47,13 @@ const Header = () => {
           </ul>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-dark m-3 text-white" to="#">
+          <Link className="nav-link text-dark m-3 " to="#">
             News & Events
           </Link>
         </li>
         <li className="nav-item dropdown">
           <Link
-            className="nav-link dropdown-toggle m-3 text-dark text-decoration-none text-white"
+            className="nav-link dropdown-toggle m-3 text-dark text-decoration-none"
             to="#"
             id="navbarDropdown"
             role="button"
@@ -82,7 +83,7 @@ const Header = () => {
 
         <li className="nav-item dropdown">
           <Link
-            className="nav-link dropdown-toggle m-3 text-dark text-decoration-none text-white"
+            className="nav-link dropdown-toggle m-3 text-dark text-decoration-none"
             to="#"
             id="navbarDropdown"
             role="button"
@@ -109,7 +110,14 @@ const Header = () => {
             </li>
           </ul>
         </li>
-             <button type="button m-2 p-2" className="btn btn text-white" onClick={() => handleLogout()}>Logout</button>
+        <li className="nav-item">
+          <button className="btn btn nav-link active text-dark m-3" to="#" onClick={() => handleLogout()}>
+          Logout
+          </button>
+        </li>
+     
+              {/* <button type="button m-2 p-2" className=" nav-link btn text-white" onClick={() => handleLogout()}>Logout</button> */}
+             
       </ul>
     </>
   );

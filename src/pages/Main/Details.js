@@ -1,6 +1,8 @@
 import axios from "axios";
+import moment from "moment";
 import React, { useEffect, useState } from "react";
 import "./details.css";
+import { ToastContainer, toast } from 'react-toastify';
 
 // import image from '../../../src/assets/anonymous.png';
 
@@ -15,22 +17,24 @@ const Details = () => {
   const fetchData = () => {
     axios.get(`/profile/${id}`).then(({ data }) => {
       setmData({ ...data.data, picture: data.data.image });
-    });
+    }).catch(error => toast(error.message));
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-//   function capitalizeFirstLetter(string) {
-//     return string.charAt(0).toUpperCase() + string.slice(1);
-//   }
 
   console.log(mdata)
   
 
   return (
     <>
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+  </ol>
+</nav>
       <div className="container emp-profile">
         <form method="post">
           <div className="row">
@@ -151,7 +155,7 @@ const Details = () => {
                         <label>DOB</label>
                       </div>
                       <div className="col-md-6">
-                        <p>{mdata.dob}</p>
+                        <p>{moment(mdata.dob).format("l")}</p>
                       </div>
                     </div>
                   </div>
@@ -198,6 +202,7 @@ const Details = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </>
   );
 };

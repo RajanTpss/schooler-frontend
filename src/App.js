@@ -6,6 +6,7 @@ import Register from "./pages/Credentials/Register";
 import Protectedd from "./pages/Credentials/Protectedd";
 import Protected from "./pages/Credentials/Protected";
 import axios from "axios";
+import 'react-toastify/dist/ReactToastify.css';
 // import VideoPlayer from "./pages/Credentials/VideoPlayer";
 
 const App = () => {
