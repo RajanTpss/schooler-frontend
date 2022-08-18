@@ -14,10 +14,6 @@ function CustomPaggination({ itemsPerPage }) {
   
     useEffect(() => {
       // Fetch items from another resources.
-      axios.get("https://dummy.restapiexample.com/api/v1/employees")
-      .then((res)=>{
-        console.log("Res:",res);
-      })
       const endOffset = itemOffset + itemsPerPage;
       console.log(`Loading items from ${itemOffset} to ${endOffset}`);
       setCurrentItems(items.slice(itemOffset, endOffset));

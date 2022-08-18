@@ -11,12 +11,16 @@ const CustomTable = ({ tableHeading, tableData }) => {
               tableHeading.length > 0
                 ?
                 tableHeading.map((item) => {
-                  return (
+                  return (<>
+
                     <th scope="col">{item}</th>
+                   
+                  </>
                   )
                 })
                 : null
             }
+             <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -28,9 +32,9 @@ const CustomTable = ({ tableHeading, tableData }) => {
                   <>
                     <tr>
                       <th scope="row">{item.id}</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <td>{item.name}</td>
+                      <td>{item.description}</td>
+                      <td>Veiw Delete</td>
                     </tr>
                   </>
                 )

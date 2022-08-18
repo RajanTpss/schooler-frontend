@@ -1,5 +1,5 @@
 import axios from 'axios';
-let Token = JSON.parse(localStorage.getItem('Token'));
+let Token = JSON.parse(localStorage.getItem('token'));
 axios.defaults.headers.common['Authorization'] = `Bearer ${Token}`;
 axios.defaults.baseURL = `http://192.168.1.172:5001/api/`;
 const getAPI = async (url) => {
